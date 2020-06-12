@@ -8,8 +8,8 @@ Send POST with JSON body with Postman
 
 ```json
 {
-    "name": "walk dog",
-    "isComplete": true
+  "name": "walk dog",
+  "isComplete": true
 }
 ```
 
