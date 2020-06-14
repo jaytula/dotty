@@ -2,7 +2,13 @@
 
 https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.1&tabs=visual-studio-code
 
-## Test PostTodoItem with Postman
+## Tutorial Notes
+
+### Create a web API
+
+#### Examine the PostTodoItem create method
+
+##### Test PostTodoItem with Postman
 
 Send POST with JSON body with Postman
 
@@ -18,7 +24,14 @@ in the Response Location Header which should be something like:
 
 https://localhost:5001/api/TodoItems/3
 
-## Notes
+##### Examine the GET methods
+
+Examine endpoints:
+
+- `GET /api/TodoItems`
+- `GET /api/TodoItems/{id}`
+
+## General Notes
 
 ### 5 Ways to set URLs in case ports conflict
 
