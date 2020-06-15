@@ -31,6 +31,18 @@ Examine endpoints:
 - `GET /api/TodoItems`
 - `GET /api/TodoItems/{id}`
 
+##### Routing and URL paths
+
+Examine `TodoItemsController.cs`. URL Path construction goes like this:
+
+- Start with the template string in the `Route` attribute: `[Route("/api/[controller]")]`
+- Replace `[controller]` with the name of the controller minus the `Controller` suffix.  For
+`TodoItemsController`, this would be `TodoItems` (`todoitems` is also okay because ASP.net Core
+routing is case insensitive)
+- If `[HttpGet]` attribute has a route template, then append it to the path.
+- If the route template has a placeholder like `[HttpGet("{id}")]` as is the case for
+`GetTodoItem`, then the value of `{id}` is provided in the `id` parameter.
+
 ## General Notes
 
 ### 5 Ways to set URLs in case ports conflict
