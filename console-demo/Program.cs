@@ -70,6 +70,23 @@ namespace console_demo
 
       c = a / b;
       Console.WriteLine(c);
+
+      // Multiplication before addition
+      a = 5;
+      b = 4;
+      c = 2;
+      Console.WriteLine(a + b * c);
+
+      // Force order of operations
+      Console.WriteLine((a + b) * c);
+
+      Console.WriteLine((a + b) - 6 * c + (12 * 4) / 3 + 12);
+
+      // Integer division produces an integer
+      a = 7;
+      b = 4;
+      c = 3;
+      Console.WriteLine((a + b) / c);
     }
   }
 }
