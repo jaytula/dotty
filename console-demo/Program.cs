@@ -6,6 +6,15 @@ namespace console_demo
   {
     static void Main(string[] args)
     {
+      switch (args[0])
+      {
+        case "numbers": Numbers(); break;
+        default: HelloWorld(); break;
+      }
+    }
+
+    static void HelloWorld()
+    {
       Console.WriteLine("Hello World!");
 
       string aFriend = "Bill";
@@ -44,6 +53,23 @@ namespace console_demo
       Console.WriteLine(songLyrics.StartsWith("goodbye"));
       Console.WriteLine(songLyrics.EndsWith("hello"));
       Console.WriteLine(songLyrics.EndsWith("goodbye"));
+    }
+
+    static void Numbers()
+    {
+      int a = 18;
+      int b = 6;
+      int c = a + b;
+      Console.WriteLine(c);
+
+      c = a - b;
+      Console.WriteLine(c);
+
+      c = a * b;
+      Console.WriteLine(c);
+
+      c = a / b;
+      Console.WriteLine(c);
     }
   }
 }
