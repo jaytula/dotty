@@ -11,6 +11,7 @@ namespace console_demo
         case "numbers": Numbers(); break;
         case "numbers-precision": NumbersExploreIntegerPrecision(); break;
         case "numbers-double-type": NumbersDoubleType(); break;
+        case "numbers-decimal-type": NumbersDecimalType(); break;
         default: HelloWorld(); break;
       }
     }
@@ -114,7 +115,7 @@ namespace console_demo
       double a = 5;
       double b = 4;
       double c = 2;
-      double d = (a+b)/c;
+      double d = (a + b) / c;
       Console.WriteLine(d);
 
       a = 19;
@@ -129,6 +130,23 @@ namespace console_demo
 
       double third = 1.0 / 3.0;
       Console.WriteLine(third);
+    }
+
+    static void NumbersDecimalType()
+    {
+       decimal min = decimal.MinValue;
+       decimal max = decimal.MaxValue;
+       Console.WriteLine($"The decimal range is from {min} to {max}");
+
+       double a = 1.0;
+       double b = 3.0;
+       Console.WriteLine(a / b);
+
+       decimal c = 1.0M;
+       decimal d = 3.0M;
+       Console.WriteLine(c / d);
+
+       Console.WriteLine(Math.PI*2.5*2.5);
     }
   }
 }
