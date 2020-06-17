@@ -6,7 +6,8 @@ namespace console_demo
   {
     static void Main(string[] args)
     {
-      switch (args[0])
+      string choice = args.Length > 0 ? args[0] : "";
+      switch (choice)
       {
         case "numbers": Numbers(); break;
         case "numbers-precision": NumbersExploreIntegerPrecision(); break;
