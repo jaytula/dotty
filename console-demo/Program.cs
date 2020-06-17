@@ -9,6 +9,7 @@ namespace console_demo
       switch (args[0])
       {
         case "numbers": Numbers(); break;
+        case "numbers-precision": NumbersExploreIntegerPrecision(); break;
         default: HelloWorld(); break;
       }
     }
@@ -87,6 +88,24 @@ namespace console_demo
       b = 4;
       c = 3;
       Console.WriteLine((a + b) / c);
+    }
+
+    static void NumbersExploreIntegerPrecision()
+    {
+      int a = 7;
+      int b = 4;
+      int c = 3;
+      int d = (a + b) / c;
+      int e = (a + b) % c;
+      Console.WriteLine($"Quotient: {d}");
+      Console.WriteLine($"Remainder: {e}");
+
+      int max = int.MaxValue;
+      int min = int.MinValue;
+      Console.WriteLine($"The range of integers is {min} to {max}");
+
+      int what = max + 3;
+      Console.WriteLine($"An example of overflow: {what}");
     }
   }
 }
