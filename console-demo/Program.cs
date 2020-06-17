@@ -13,6 +13,7 @@ namespace console_demo
         case "numbers-precision": NumbersExploreIntegerPrecision(); break;
         case "numbers-double-type": NumbersDoubleType(); break;
         case "numbers-decimal-type": NumbersDecimalType(); break;
+        // case "branches-and-loops": BranchesAndLoopsMain(); break;
         default: HelloWorld(); break;
       }
     }
