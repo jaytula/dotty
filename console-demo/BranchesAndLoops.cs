@@ -44,16 +44,25 @@ namespace console_demo
 
       // Use loops to repeat operations
       int counter = 0;
-      while(counter < 10) {
+      while (counter < 10)
+      {
         Console.WriteLine($"The counter is {counter}");
         counter++;
       }
 
       counter = 0;
-      do {
+      do
+      {
         Console.WriteLine($"The counter is {counter}");
         counter++;
-      } while(counter < 10);
+      } while (counter < 10);
+
+      // Work with the for loop
+
+      for (counter = 0; counter < 10; counter++)
+      {
+        Console.WriteLine($"For Loop counter is {counter}");
+      }
     }
   }
 }
