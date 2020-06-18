@@ -71,6 +71,17 @@ namespace console_demo
           Console.WriteLine($"This cell is ({row}, {col})");
         }
       }
+
+      // Summ all integers 1 through 20 that are divisible by 3.
+      int sum = 0;
+      for (int curr = 1; curr <= 20; curr++)
+      {
+        if(curr % 3 == 0) {
+          sum += curr;
+        }
+
+      }
+      Console.WriteLine($"The sum is {sum}");
     }
   }
 }
