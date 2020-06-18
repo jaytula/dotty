@@ -41,6 +41,19 @@ namespace console_demo
         Console.WriteLine("The answer is not greater than 10");
         Console.WriteLine("And the first number is not equal to the second");
       }
+
+      // Use loops to repeat operations
+      int counter = 0;
+      while(counter < 10) {
+        Console.WriteLine($"The counter is {counter}");
+        counter++;
+      }
+
+      counter = 0;
+      do {
+        Console.WriteLine($"The counter is {counter}");
+        counter++;
+      } while(counter < 10);
     }
   }
 }
