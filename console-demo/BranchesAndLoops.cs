@@ -63,6 +63,14 @@ namespace console_demo
       {
         Console.WriteLine($"For Loop counter is {counter}");
       }
+
+      // Created nested loops
+      for (int row = 0; row < 11; row++)
+      {
+        for (char col = 'a'; col < 'k'; col++) {
+          Console.WriteLine($"This cell is ({row}, {col})");
+        }
+      }
     }
   }
 }
