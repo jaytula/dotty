@@ -14,6 +14,7 @@ namespace console_demo
         case "numbers-double-type": NumbersDoubleType(); break;
         case "numbers-decimal-type": NumbersDecimalType(); break;
         case "branches-and-loops": BranchesAndLoops.BranchesAndLoopsMain(); break;
+        case "list-collection": ListCollection.ListCollectionMain(); break;
         default: HelloWorld(); break;
       }
     }
