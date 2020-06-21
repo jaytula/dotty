@@ -1,5 +1,7 @@
 using System;
 
+using System.Collections.Generic;
+
 namespace console_oop_demo
 {
   public class BankAccount
@@ -7,12 +9,26 @@ namespace console_oop_demo
     private static int accountNumberSeed = 1234567890;
     public string Number { get; }
     public string Owner { get; set; }
-    public decimal Balance { get; }
+    public decimal Balance
+    {
+      get
+      {
+        decimal balance = 0;
+        foreach (var item in allTransactions)
+        {
+          balance += item.Amount;
+        }
+
+        return balance;
+      }
+    }
+    private List<Transaction> allTransactions = new List<Transaction>();
 
 
-    public BankAccount(string name, decimal initialBalance) {
+    public BankAccount(string name, decimal initialBalance)
+    {
       this.Owner = name;
-      this.Balance = initialBalance;
+      // this.Balance = initialBalance;
       this.Number = accountNumberSeed.ToString();
       accountNumberSeed++;
     }
