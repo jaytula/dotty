@@ -31,6 +31,8 @@ namespace console_oop_demo
       // this.Balance = initialBalance;
       this.Number = accountNumberSeed.ToString();
       accountNumberSeed++;
+
+      MakeDeposit(initialBalance, DateTime.Now, "Initial Balance");
     }
 
     public void MakeDeposit(decimal amount, DateTime date, string note)
