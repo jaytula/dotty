@@ -52,6 +52,10 @@ namespace console_oop_demo
       {
         throw new ArgumentOutOfRangeException(nameof(amount), "Amount of withdrawal must be positive" );
       }
+      if(Balance - amount < 0)
+      {
+        throw new InvalidOperationException("Not sufficient funds for this withdrawal");
+      }
       var withdrawal = new Transaction(-amount, date, note);
       allTransactions.Add(withdrawal);
     }
