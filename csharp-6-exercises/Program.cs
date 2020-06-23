@@ -6,11 +6,19 @@ namespace csharp_6_exercises
   {
     public string FirstName { get; }
     public string LastName { get; }
+    public string MiddleName { get; } = "P";
 
     public Person(string firstName, string lastName)
     {
       FirstName = firstName;
       LastName = lastName;
+    }
+
+    public Person(string first, string middle, string last)
+    {
+      FirstName = first;
+      MiddleName = middle;
+      LastName = last;
     }
 
     public string AllCaps()
@@ -20,7 +28,7 @@ namespace csharp_6_exercises
 
     public override string ToString()
     {
-      return $"{FirstName} {LastName}";
+      return $"{FirstName} {MiddleName} {LastName}";
     }
   }
 
