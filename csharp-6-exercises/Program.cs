@@ -21,15 +21,9 @@ namespace csharp_6_exercises
       LastName = last;
     }
 
-    public string AllCaps()
-    {
-      return ToString().ToUpper();
-    }
+    public string AllCaps() => ToString().ToUpper();
 
-    public override string ToString()
-    {
-      return $"{FirstName} {MiddleName} {LastName}";
-    }
+    public override string ToString() => $"{FirstName} {MiddleName} {LastName}";
   }
 
   class Program
