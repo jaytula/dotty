@@ -1,4 +1,5 @@
 ﻿using static System.Console;
+using System.Linq;
 
 namespace csharp_6_exercises
 {
@@ -36,6 +37,11 @@ namespace csharp_6_exercises
       var person = new Person("Max", "Schwartz");
       WriteLine($"The name, in all caps: " + person.AllCaps());
       WriteLine($"The name is {person.ToString()}");
+
+      var phrase = "the quick brown fox jumps over the lazy dog";
+      var wordLength = from word in phrase.Split(' ') select word.Length;
+      WriteLine($"The average word length is: {wordLength.Average():F2}");
+
     }
   }
 }
