@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace csharp_6_exercises
 {
@@ -26,14 +26,16 @@ namespace csharp_6_exercises
     public override string ToString() => $"{FirstName} {MiddleName} {LastName}";
   }
 
+
   class Program
   {
+
     static void Main(string[] args)
     {
-      Console.WriteLine("Hello World!");
+      WriteLine("Hello World!");
       var person = new Person("Max", "Schwartz");
-      Console.WriteLine($"The name, in all caps: " + person.AllCaps());
-      Console.WriteLine($"The name is {person.ToString()}");
+      WriteLine($"The name, in all caps: " + person.AllCaps());
+      WriteLine($"The name is {person.ToString()}");
     }
   }
 }
