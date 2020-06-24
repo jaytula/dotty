@@ -33,15 +33,29 @@ namespace csharp_6_exercises
 
     static void Main(string[] args)
     {
-      WriteLine("Hello World!");
-      var person = new Person("Max", "Schwartz");
-      WriteLine($"The name, in all caps: " + person.AllCaps());
-      WriteLine($"The name is {person.ToString()}");
+      // WriteLine("Hello World!");
+      // var person = new Person("Max", "Schwartz");
+      // WriteLine($"The name, in all caps: " + person.AllCaps());
+      // WriteLine($"The name is {person.ToString()}");
 
-      var phrase = "the quick brown fox jumps over the lazy dog";
-      var wordLength = from word in phrase.Split(' ') select word.Length;
-      WriteLine($"The average word length is: {wordLength.Average():F2}");
+      // var phrase = "the quick brown fox jumps over the lazy dog";
+      // var wordLength = from word in phrase.Split(' ') select word.Length;
+      // WriteLine($"The average word length is: {wordLength.Average():F2}");
 
+      string s = null;
+      WriteLine(s?.Length);
+
+      char? c = s?[0];
+      WriteLine(c.HasValue);
+
+      string s2 = null;
+      bool? hasMore = s2?.ToCharArray()?.GetEnumerator()?.MoveNext();
+      WriteLine(hasMore.HasValue && hasMore.Value);
+
+      // null coalescing operator
+      string s3 = "abcdefg";
+      bool hasMore3 = s3?.ToCharArray()?.GetEnumerator()?.MoveNext() ?? false;
+      WriteLine(hasMore3);
     }
   }
 }
