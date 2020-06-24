@@ -1,4 +1,5 @@
-﻿using static System.Console;
+﻿using System;
+using static System.Console;
 using System.Linq;
 
 namespace csharp_6_exercises
@@ -33,6 +34,7 @@ namespace csharp_6_exercises
 
     static void Main(string[] args)
     {
+      ExceptionFilters();
     }
 
     static void StringFormatting()
@@ -63,6 +65,26 @@ namespace csharp_6_exercises
       string s3 = "abcdefg";
       bool hasMore3 = s3?.ToCharArray()?.GetEnumerator()?.MoveNext() ?? false;
       WriteLine(hasMore3);
+    }
+
+    private static bool LogException(Exception e)
+    {
+      WriteLine($"\tIn the log routine. Caught {e.GetType()}");
+      WriteLine($"\tMessage: {e.Message}");
+      return true;
+    }
+    static void ExceptionFilters()
+    {
+      try
+      {
+        string s = null;
+        WriteLine(s.Length);
+
+      }
+      catch (Exception e) when (LogException(e))
+      {
+      }
+      WriteLine("Exception must have been handled");
     }
   }
 }
