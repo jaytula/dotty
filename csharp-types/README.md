@@ -58,3 +58,14 @@ Notes:
 - Frequently used types in the class library are automatically available.
 - Others become available when you explicitly add a project reference to the assembly in which they
 are defined
+
+### The common type system
+
+#### Two fundamental points about the type system in .NET
+
+- Inheritance
+  - Supports inheritance. Types can derive from other types, called *base types*
+  - All types derive ultimately from a single base type: `System.Object` (C# keyword: `object`)
+- Either value or reference type
+  - Types defined by `struct` keyword are value types
+  - Tyeps defined by `class` keyword are reference types
