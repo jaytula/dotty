@@ -41,3 +41,20 @@ System.Int32 number = 32;
 
 Lastly `void` represents the absence of a type. Used to indicate that a function does not
 return a value.
+
+
+### Custom Types
+
+Create own custom types with:
+
+- `struct`
+- `class`
+- `interface`
+- `enum`
+
+Notes:
+
+- The `.NET class library` is a collection of *custom types* provided by **Microsoft**.
+- Frequently used types in the class library are automatically available.
+- Others become available when you explicitly add a project reference to the assembly in which they
+are defined
