@@ -2,6 +2,8 @@
 using static System.Console;
 using System.Linq;
 
+using System.Collections.Generic;
+
 namespace csharp_6_exercises
 {
   class Person
@@ -34,7 +36,7 @@ namespace csharp_6_exercises
 
     static void Main(string[] args)
     {
-      ExceptionFilters();
+      NameOf();
     }
 
     static void StringFormatting()
@@ -85,6 +87,14 @@ namespace csharp_6_exercises
       {
       }
       WriteLine("Exception must have been handled");
+    }
+
+    static void NameOf() {
+      WriteLine(nameof(System.String));
+      int j = 5;
+      WriteLine(nameof(j));
+      List<string> names = new List<string>();
+      WriteLine(nameof(names));
     }
   }
 }
