@@ -36,7 +36,7 @@ namespace csharp_6_exercises
 
     static void Main(string[] args)
     {
-      NameOf();
+      NewObjectInitSyntax();
     }
 
     static void StringFormatting()
@@ -89,12 +89,26 @@ namespace csharp_6_exercises
       WriteLine("Exception must have been handled");
     }
 
-    static void NameOf() {
+    static void NameOf()
+    {
       WriteLine(nameof(System.String));
       int j = 5;
       WriteLine(nameof(j));
       List<string> names = new List<string>();
       WriteLine(nameof(names));
+    }
+
+
+    static void NewObjectInitSyntax()
+    {
+      var messages = new Dictionary<int, string>
+      {
+        [404] = "Page not Found",
+        [302] = "Page moved, but left a forwarding address.",
+        [500] = "The web server can't come out to play today."
+      };
+
+      WriteLine(messages[302]);
     }
   }
 }
