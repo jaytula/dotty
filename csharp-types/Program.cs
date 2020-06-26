@@ -8,11 +8,27 @@ namespace csharp_types
   {
 
   }
+
+  public struct Coords
+  {
+    public int x, y;
+    public Coords(int p1, int p2)
+    {
+      x = p1;
+      y = p2;
+    }
+    public override string ToString()
+    {
+      return $"({x}, {y})";
+    }
+  }
+
   class Program
   {
     static void Main(string[] args)
     {
-      TypesVarsValues();
+      // TypesVarsValues();
+      ValueTypes();
     }
 
     // C# compiler makes sure all operations are type-safe.
@@ -44,6 +60,12 @@ namespace csharp_types
       var query = from item in source
                   where item <= limit
                   select item;
+    }
+
+    static void ValueTypes()
+    {
+      var coord1 = new Coords(5, 7);
+      Console.WriteLine($"coord1 is {coord1}");
     }
   }
 }

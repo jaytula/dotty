@@ -69,3 +69,11 @@ are defined
 - Either value or reference type
   - Types defined by `struct` keyword are value types
   - Tyeps defined by `class` keyword are reference types
+
+#### Value types
+
+There are two categories of Value Types.
+
+- `struct`
+- `enum`
+
