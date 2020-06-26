@@ -23,6 +23,16 @@ namespace csharp_types
     }
   }
 
+  public enum FileMode
+  {
+    CreateNew = 1,
+    Create = 2,
+    Open = 3,
+    OpenOrCreate = 4,
+    Truncate = 5,
+    Append = 6,
+  }
+
   class Program
   {
     static void Main(string[] args)
@@ -66,6 +76,8 @@ namespace csharp_types
     {
       var coord1 = new Coords(5, 7);
       Console.WriteLine($"coord1 is {coord1}");
+
+      Console.WriteLine($"FileMode.Create = {FileMode.Create}");
     }
   }
 }
