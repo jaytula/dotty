@@ -97,3 +97,18 @@ IMyInterface iface = new MyClass();
 
 - Array implicitly dreive from `System.Array`
 - Reference types fully support inheritance.
+
+
+### Types of literal values
+
+Literals are typed so the following works:
+
+```cs
+string s = "The answer is " + 5.ToString();
+// Outputs: "The answer is 5"
+Console.WriteLine(s);
+
+Type type = 12345.GetType();
+// Outputs: "System.Int32"
+Console.WriteLine(type);
+```

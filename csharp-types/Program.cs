@@ -38,7 +38,8 @@ namespace csharp_types
     static void Main(string[] args)
     {
       // TypesVarsValues();
-      ValueTypes();
+      // ValueTypes();
+      LiteralValues();
     }
 
     // C# compiler makes sure all operations are type-safe.
@@ -78,6 +79,17 @@ namespace csharp_types
       Console.WriteLine($"coord1 is {coord1}");
 
       Console.WriteLine($"FileMode.Create = {FileMode.Create}");
+    }
+
+    static void LiteralValues()
+    {
+      string s = "The answer is " + 5.ToString();
+      // Outputs: "The answer is 5"
+      Console.WriteLine(s);
+
+      Type type = 12345.GetType();
+      // Outputs: "System.Int32"
+      Console.WriteLine(type);
     }
   }
 }
