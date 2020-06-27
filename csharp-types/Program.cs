@@ -1,6 +1,7 @@
 ﻿using System;
 
 using System.Linq;
+using System.Collections.Generic;
 
 namespace csharp_types
 {
@@ -39,7 +40,7 @@ namespace csharp_types
     {
       // TypesVarsValues();
       // ValueTypes();
-      LiteralValues();
+      // LiteralValues();
     }
 
     // C# compiler makes sure all operations are type-safe.
@@ -90,6 +91,13 @@ namespace csharp_types
       Type type = 12345.GetType();
       // Outputs: "System.Int32"
       Console.WriteLine(type);
+    }
+
+    static void GenericTypes()
+    {
+      List<string> myList = new List<string>();
+      myList.Add("abcd");
+      // myList.Add(4); // Compile fails
     }
   }
 }

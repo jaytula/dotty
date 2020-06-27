@@ -112,3 +112,8 @@ Type type = 12345.GetType();
 // Outputs: "System.Int32"
 Console.WriteLine(type);
 ```
+
+### Generic types
+
+A type can be declared with one or more *type parameters* that serve as a placehodler for an actual type.  An example of this is
+`System.Collection.Generic.List`
