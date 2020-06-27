@@ -77,3 +77,23 @@ There are two categories of Value Types.
 - `struct`
 - `enum`
 
+#### Reference Types
+
+References types are types defined as:
+
+- class
+- delegate
+- array
+- interface
+
+Notes:
+
+- At run time, a reference type value is initially `null` until an object is explicitly created with the `new` operator
+- An interface must be initialized together with a class object taht implements it.
+
+```cs
+IMyInterface iface = new MyClass();
+```
+
+- Array implicitly dreive from `System.Array`
+- Reference types fully support inheritance.
