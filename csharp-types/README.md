@@ -117,3 +117,9 @@ Console.WriteLine(type);
 
 A type can be declared with one or more *type parameters* that serve as a placehodler for an actual type.  An example of this is
 `System.Collection.Generic.List`
+
+### Implicit types, anonymous types, and nullable value types
+
+- Local variables implicitly typed with `var` keyword
+- Anonymous types...
+- Ordinary value types cannot be `null` but affixing `?` after the type makes them `nullable`
