@@ -23,14 +23,9 @@ namespace AsyncBreakfast
       Console.WriteLine("coffee is ready");
 
       Task<Egg> eggsTask = FryEggsAsync(2);
-      Egg eggs = await eggsTask;
-      Console.WriteLine("eggs are ready");
-
       Task<Bacon> baconTask = FryBaconAsync(3);
-      Bacon bacon = await baconTask;
-      Console.WriteLine("bacon is ready");
-
       Task<Toast> toastTask = ToastBreadAsync(2);
+
       Toast toast = await toastTask;
       ApplyButter(toast);
       ApplyJam(toast);
@@ -38,6 +33,11 @@ namespace AsyncBreakfast
 
       Juice oj = PourOJ();
       Console.WriteLine("oj is ready");
+
+      Egg eggs = await eggsTask;
+      Console.WriteLine("eggs are ready");
+      Bacon bacon = await baconTask;
+      Console.WriteLine("bacon is ready");
       Console.WriteLine("Breakfast is ready!");
     }
 
@@ -55,7 +55,7 @@ namespace AsyncBreakfast
 
     private static async Task<Toast> ToastBreadAsync(int slices)
     {
-      for (int slice = 0; slice < slices;  slice++)
+      for (int slice = 0; slice < slices; slice++)
       {
         Console.WriteLine("Putting a slice of bread in the toaster");
       }
