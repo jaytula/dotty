@@ -18,7 +18,7 @@
     "razor_pages_tutorial": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:5001;http://localhost:5000",
+      "applicationUrl": "https://localhost:6021;http://localhost:6020",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
