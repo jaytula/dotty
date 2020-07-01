@@ -26,3 +26,12 @@ Contains the entry point for the program. For more information, see .NET Generic
 
 ### Startup.cs
 Contains code that configures app behavior. For more information, see App startup in ASP.NET Core.
+
+### Part 2, add a model to a Razor Pages app
+
+#### Scaffold the movie model
+
+```shell
+dotnet tool install --global dotnet-aspnet-codegenerator
+dotnet aspnet-codegenerator razorpage -m Movie -dc RazorPagesMovieContext -udl -outDir Pages/Movies --referenceScriptLibraries
+```
