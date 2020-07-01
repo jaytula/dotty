@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace razor_pages_tutorial
+namespace RazorPagesMovie
 {
     public class Program
     {
