@@ -1,6 +1,6 @@
 ## Razor Page tutorial
 
-https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-3.1&tabs=visual-studio-code
+https://docs.microsoft.com/en-us/as pnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-3.1&tabs=visual-studio-code
 
 ### Examine the project files
 Here's an overview of the main project folders and files that you'll work with in later tutorials.
@@ -34,4 +34,13 @@ Contains code that configures app behavior. For more information, see App startu
 ```shell
 dotnet tool install --global dotnet-aspnet-codegenerator
 dotnet aspnet-codegenerator razorpage -m Movie -dc RazorPagesMovieContext -udl -outDir Pages/Movies --referenceScriptLibraries
+```
+
+#### Initial migration
+
+```shell
+dotnet tool install --global dotnet-ef
+
+dotnet ef migrations add InitialCreate
+dotnet ef database update
 ```

@@ -34,3 +34,9 @@ bld/
 # NUNIT
 *.VisualState.xml
 TestResult.xml
+
+# Ignore Migrations/
+Migrations
+
+# Ignore Database file
+MvcMovie.db
