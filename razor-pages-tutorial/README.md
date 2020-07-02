@@ -56,3 +56,25 @@ dotnet ef database update
 - The class name by convection is named `<PageName>Model`
 - Dependency injection used to add the `RazorPagesMovieContext`
 - `OnGetAsync` or `OnGet` does not need a return unless the return type involves an `Action`
+
+#### Razor reserved keywords
+
+- page
+- namespace
+- functions
+- inherits
+- model
+- section
+
+Transition to Razor-specific markup or C# happens with `@`
+
+##### `@page` directive
+
+This directive makes the file an MVC action which means it can handle requests.  It must be the first Razor directive on a page.
+
+##### Notes
+
+Look into...
+
+- `Html.DisplayNameFor`
+- `Html.DisplayFor`
