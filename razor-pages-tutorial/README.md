@@ -44,3 +44,15 @@ dotnet tool install --global dotnet-ef
 dotnet ef migrations add InitialCreate
 dotnet ef database update
 ```
+
+### Part 3, scaffolded Razor Pages in ASP.NET Core
+
+#### The Create, Delete, Details, and Edit pages
+
+
+##### Listing
+
+- Razor Pages derive from `PageModel`
+- The class name by convection is named `<PageName>Model`
+- Dependency injection used to add the `RazorPagesMovieContext`
+- `OnGetAsync` or `OnGet` does not need a return unless the return type involves an `Action`
