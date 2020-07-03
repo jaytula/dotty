@@ -78,3 +78,11 @@ Look into...
 
 - `Html.DisplayNameFor`
 - `Html.DisplayFor`
+
+##### `@model directive
+
+Specifies the type of the model passed to the Razor Page.
+
+```cs
+@model razor_pages_tutorial.Pages.Movies.IndexModel
+```
